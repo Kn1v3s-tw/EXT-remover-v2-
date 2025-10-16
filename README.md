@@ -1,6 +1,6 @@
-# Chrome Extension Remover
+# Chrome Extension Remover (Node.js)
 
-A simple Python tool to remove unauthorized Chrome extensions from Windows devices.
+A simple Node.js tool to remove unauthorized Chrome extensions from Windows devices.
 
 ## How It Works
 
@@ -10,18 +10,27 @@ A simple Python tool to remove unauthorized Chrome extensions from Windows devic
 ## Usage
 
 1. **Edit the whitelist:**  
-   Open `chrome_extension_remover.py` and add the extension IDs you want to allow to the `WHITELIST` list.
+   Open `chrome-extension-remover.js` and add the extension IDs you want to allow to the `WHITELIST` list.
 
-2. **Run the script:**  
+2. **Install dependencies:**  
+   No dependencies required (uses built-in Node.js modules).
+
+3. **Run the script:**  
    ```sh
-   python chrome_extension_remover.py
+   node chrome-extension-remover.js
    ```
-   - Requires Python 3.x.
-   - Run in a Command Prompt or Terminal window.
+   Or, if installed as an npm package globally:
+   ```sh
+   npx chrome-extension-remover
+   ```
+   Or, if installed globally:
+   ```sh
+   chrome-extension-remover
+   ```
 
 ## Notes
 
-- Only works on Windows (`%LOCALAPPDATA%` path).
+- Only works on Windows (`AppData` path).
 - Run with a user account that has access to Chrome's extension directory.
 
 ## License
